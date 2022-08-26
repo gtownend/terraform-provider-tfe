@@ -1,9 +1,8 @@
 module "tflocal" {
   source                       = "app.terraform.io/hashicorp-v2/tflocal-cloud/aws"
-  version                      = "0.3.0"
+  version                      = "0.4.3"
   tflocal_cloud                = "true"
   tflocal_cloud_admin_password = var.tflocal_cloud_admin_password
-  tflocal_cloud_admin_token    = var.tflocal_cloud_admin_token
   git_branch                   = var.git_branch
   tfe_ref                      = var.tfe_ref
   ngrok_domain                 = var.ngrok_domain
@@ -13,6 +12,8 @@ module "tflocal" {
   gem_contribsys_key           = var.gem_contribsys_key
   ejson_file_name              = var.ejson_file_name
   ejson_file_content           = var.ejson_file_content
+  artifactory_username         = var.artifactory_username
+  artifactory_token            = var.artifactory_token
   quay_username                = var.quay_username
   quay_password                = var.quay_password
   run_cleanup_script           = var.run_cleanup_script
